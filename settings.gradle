@@ -1,0 +1,2 @@
+rootProject.name = "FootGear"
+include ':app'

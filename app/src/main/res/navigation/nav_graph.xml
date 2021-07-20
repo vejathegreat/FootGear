@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.velaphi.footgear.fragments.LoginFragment"
+        android:label="@string/login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_onboardingWelcomeFragment"
+            app:destination="@id/onboardingWelcomeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/onboardingWelcomeFragment"
+        android:name="com.velaphi.footgear.fragments.OnboardingWelcomeFragment"
+        android:label="Welcome">
+        <action
+            android:id="@+id/action_welcomeFragment_to_instructionFragment"
+            app:destination="@id/onboardingInstructionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/onboardingInstructionFragment"
+        android:name="com.velaphi.footgear.fragments.OnboardingInstructionFragment"
+        android:label="Instructions" >
+        <action
+            android:id="@+id/action_Instruction_to_productListFragment"
+            app:destination="@id/productListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/productListFragment"
+        android:name="com.velaphi.footgear.fragments.ProductListFragment"
+        android:label="Shoe Inventory">
+        <action
+            android:id="@+id/action_productList_to_addShoeFragment"
+            app:destination="@id/addShoeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addShoeFragment"
+        android:name="com.velaphi.footgear.fragments.AddShoeFragment"
+        android:label="Shoe Details">
+        <action
+            android:id="@+id/action_addShoe_to_productList"
+            app:destination="@id/productListFragment" />
+    </fragment>
+
+</navigation>
