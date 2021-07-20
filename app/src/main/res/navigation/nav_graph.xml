@@ -12,7 +12,10 @@
         tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_onboardingWelcomeFragment"
-            app:destination="@id/onboardingWelcomeFragment" />
+            app:destination="@id/onboardingWelcomeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
 
     <fragment
@@ -21,7 +24,9 @@
         android:label="Welcome">
         <action
             android:id="@+id/action_welcomeFragment_to_instructionFragment"
-            app:destination="@id/onboardingInstructionFragment" />
+            app:destination="@id/onboardingInstructionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
 
     <fragment
@@ -30,7 +35,11 @@
         android:label="Instructions" >
         <action
             android:id="@+id/action_Instruction_to_productListFragment"
-            app:destination="@id/productListFragment" />
+            app:destination="@id/productListFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="false"/>
     </fragment>
 
     <fragment
@@ -48,7 +57,8 @@
         android:label="Shoe Details">
         <action
             android:id="@+id/action_addShoe_to_productList"
-            app:destination="@id/productListFragment" />
+            app:destination="@id/productListFragment"
+            app:enterAnim="@anim/slide_in_left" />
     </fragment>
 
 </navigation>
