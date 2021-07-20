@@ -2,6 +2,9 @@ package com.velaphi.footgear.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.AppCompatImageView
@@ -9,7 +12,9 @@ import androidx.databinding.BindingAdapter
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.velaphi.footgear.MainViewModel
 import com.velaphi.footgear.R
 import com.velaphi.footgear.databinding.FragmentProductListBinding
@@ -29,6 +34,7 @@ class ProductListFragment : Fragment() {
         fragmentViewBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_product_list, container, false
         )
+        setHasOptionsMenu(true)
         setupViewModel()
         setAddShoes()
         return fragmentViewBinding.root
@@ -49,6 +55,18 @@ class ProductListFragment : Fragment() {
                 }
             }
         })
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return NavigationUI.onNavDestinationSelected(
+            item,
+            requireView().findNavController()
+        ) || super.onOptionsItemSelected(item)
     }
 
     private fun setAddShoes() {

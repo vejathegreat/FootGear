@@ -98,7 +98,7 @@
                     android:layout_gravity="center_vertical|center_horizontal"
                     android:layout_marginStart="16dp"
                     android:layout_marginLeft="16dp"
-                    android:text="Select + new shoes to the inventory" />
+                    android:text="@string/select_new_shoes_to_the_inventory" />
             </androidx.appcompat.widget.LinearLayoutCompat>
 
             <androidx.appcompat.widget.LinearLayoutCompat
@@ -123,7 +123,7 @@
                     android:layout_gravity="center_vertical|center_horizontal"
                     android:layout_marginStart="16dp"
                     android:layout_marginLeft="16dp"
-                    android:text="TextView" />
+                    android:text="@string/view_item_added" />
             </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.constraintlayout.widget.ConstraintLayout>

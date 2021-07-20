@@ -32,7 +32,6 @@ class OnboardingWelcomeFragment : Fragment() {
         fragmentViewBinding.nextButton.setOnClickListener {
             this.findNavController()
                 .navigate(R.id.action_welcomeFragment_to_instructionFragment)
-
         }
     }
 }
