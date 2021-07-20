@@ -9,8 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.velaphi.footgear.R
 import com.velaphi.footgear.databinding.FragmentLoginBinding
-import com.velaphi.footgear.isEmailValid
-import com.velaphi.footgear.validateString
+import com.velaphi.footgear.utils.isEmailValid
+import com.velaphi.footgear.utils.validateString
 
 class LoginFragment : Fragment(){
 

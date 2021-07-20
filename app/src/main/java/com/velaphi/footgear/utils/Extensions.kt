@@ -1,8 +1,9 @@
-package com.velaphi.footgear
+package com.velaphi.footgear.utils
 
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.databinding.BindingAdapter
 import com.google.android.material.textfield.TextInputLayout
+import com.velaphi.footgear.R
 import java.util.regex.Pattern
 
 fun TextInputLayout.validateString(): Boolean {

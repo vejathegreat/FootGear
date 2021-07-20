@@ -10,9 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.velaphi.footgear.MainViewModel
 import com.velaphi.footgear.R
 import com.velaphi.footgear.databinding.FragmentAddShoeBinding
-import com.velaphi.footgear.isEmailValid
 import com.velaphi.footgear.models.Shoe
-import com.velaphi.footgear.validateString
 
 class AddShoeFragment : Fragment() {
 

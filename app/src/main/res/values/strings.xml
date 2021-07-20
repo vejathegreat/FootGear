@@ -7,6 +7,7 @@
     <string name="dont_have_an_account">Don\'t have an account? <font color='#4caf50'><b>Sign up</b></font></string>
     <string name="password_error_string">Password field cannot be empty</string>
     <string name="error_string">Field cannot be empty</string>
+    <string name="error_number_string">Field cannot be equal to 0</string>
     <string name="email_error_empty">Email field cannot be empty</string>
     <string name="email_error_invalid">Email is invalid</string>
     <string name="email_address_error">Please enter valid email address!</string>
